@@ -30,6 +30,7 @@
       if (isset($_POST["btnDsp"])) {
           $mode = "DSP";
           $moda = obtenerJuguetePorId($_POST["idjuguetes"]);
+          $selectedEst=$moda["estadojuguete"];
           $viewData["showBtnConfirmar"] = false;
           $viewData["readonly"] = 'readonly';
           $viewData["selectDisable"] = 'disabled';
@@ -40,6 +41,7 @@
           $mode = "UPD";
           //Vamos A Cargar los datos
           $moda = obtenerJuguetePorId($_POST["idjuguetes"]);
+          $selectedEst=$moda["estadojuguete"];
           mergeFullArrayTo($moda, $viewData);
           $viewData["modeDsc"] = $modeDesc[$mode] . $viewData["dscjuguete"];
       }
@@ -47,6 +49,7 @@
           $mode = "DEL";
           //Vamos A Cargar los datos
           $moda = obtenerJuguetePorId($_POST["idjuguetes"]);
+          $selectedEst=$moda["estadojuguete"];
           $viewData["readonly"] = 'readonly';
           $viewData["selectDisable"] = 'disabled';
           mergeFullArrayTo($moda, $viewData);

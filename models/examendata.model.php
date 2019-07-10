@@ -39,6 +39,15 @@ function obtenerJuguetePorId($id)
   return $juguetes;
 }
 
+function obtenerEstadoPorId($id)
+{
+  $sqlstr="select `juguetes`.`estadojuguete`
+        from `examen`.`juguetes` where idjuguetes=%d";
+  $juguetes= array();
+  $juguetes=obtenerUnRegistro(sprintf($sqlstr, $id));
+  return $juguetes;
+}
+
 
 function obtenerEstados()
 {
