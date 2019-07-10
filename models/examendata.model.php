@@ -39,6 +39,7 @@ function obtenerJuguetePorId($id)
   return $juguetes;
 }
 
+
 function obtenerEstados()
 {
     return array(
@@ -59,7 +60,7 @@ function agregarNuevoJuguete($dscjuguete, $prcjuguete, $estjuguete) {
               $insSql,
               $dscjuguete,
               $prcjuguete,
-              $estjuguetes
+              $estjuguete
           )))
       {
         return getLastInserId();

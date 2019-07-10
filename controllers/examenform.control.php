@@ -3,7 +3,7 @@
   function run()
   {
       $estadoJuguetes = obtenerEstados();
-      $selectedEst = 'PLN';
+      $selectedEst = 'ACT';
       $mode = "";
       $errores=array();
       $hasError = false;
@@ -123,7 +123,7 @@
           }
       }
       $viewData["mode"] = $mode;
-      $viewData["estadojuguete"] = addSelectedCmbArray($estadoJuguetes, 'cod', $selectedEst);
+      $viewData["estadoJuguetes"] = addSelectedCmbArray($estadoJuguetes, 'cod', $selectedEst);
       $viewData["hasErrors"] = $hasError;
       $viewData["errores"] = $errores;
       renderizar("examenform", $viewData);

@@ -20,23 +20,19 @@
   </fieldset>
   {{endif showIdJuguetes}}
   <fieldset class="row">
-    <label class="col-5" for="dscmoda">Descripción Corta</label>
-    <input type="text" name="dscmoda" id="dscmoda" {{readonly}} value="{{dscmoda}}" class="col-7" />
+    <label class="col-5" for="dscjuguete">Nombre: </label>
+    <input type="text" name="dscjuguete" id="dscjuguete" {{readonly}} value="{{nomjuguete}}" class="col-7" />
   </fieldset>
   <fieldset class="row">
-    <label class="col-5" for="prcmoda">Precio de Venta</label>
-    <input type="text" name="prcmoda" id="prcmoda" {{readonly}} value="{{prcmoda}}" class="col-7" />
+    <label class="col-5" for="precjuguete">Precio de Venta</label>
+    <input type="text" name="precjuguete" id="precjuguete" {{readonly}} value="{{preciojuguete}}" class="col-7" />
   </fieldset>
   <fieldset class="row">
-    <label class="col-5" for="ivamoda">Impuesto sobre la Venta</label>
-    <input type="text" name="ivamoda" id="ivamoda" {{readonly}} value="{{ivamoda}}" class="col-7" />
-  </fieldset>
-  <fieldset class="row">
-    <label class="col-5" for="estmoda">Estado</label>
-    <select name="estmoda" id="estmoda" class="col-7" {{selectDisable}} {{readonly}} >
-      {{foreach estadosModa}}
+    <label class="col-5" for="estjuguete">Estado</label>
+    <select name="estjuguete" id="estjuguete" class="col-7" {{selectDisable}} {{readonly}} >
+      {{foreach estadoJuguetes}}
         <option value="{{cod}}" {{selected}}>{{dsc}}</option>
-      {{endfor estadosModa}}
+      {{endfor estadoJuguetes}}
     </select>
   </fieldset>
   <fieldset class="row">
@@ -62,7 +58,7 @@
     $("#btnCancelar").click(function(e){
       e.preventDefault();
       e.stopPropagation();
-      location.assign("index.php?page=modas");
+      location.assign("index.php?page=examenlist");
     });
     $("#btnConfirmar").click(function(e){
       e.preventDefault();
